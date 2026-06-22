@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Nasi Kuning Juara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark glass-nav sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Nasi Kuning Juara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-1 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.html">Pesanan</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="darkModeToggle" class="btn btn-sm btn-outline-light rounded-pill px-3">🌙 Dark Mode</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 pb-5">
+        <div class="text-center mb-5" data-aos="fade-down">
+            <h2 class="text-utama display-5">Karya Visual Kami</h2>
+            <p class="text-muted px-3">Ketuk gambar untuk melihat detail komposisi dan harga hidangan.</p>
+        </div>
+
+        <div class="row g-4 px-2">
+
+            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="glass-card h-100" data-bs-toggle="modal" data-bs-target="#modalItem1" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/Nasi Uduk.jpg" class="card-img-top img-hover-zoom" alt="Nasi Uduk" style="height:250px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h5 class="fw-bold mb-0">Nasi Uduk Komplit</h5>
+                        <small class="text-utama">Klik untuk detail ➔</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="glass-card h-100" data-bs-toggle="modal" data-bs-target="#modalItem2" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/Nasi Kuning.jpg" class="card-img-top img-hover-zoom" alt="Nasi Kuning" style="height:250px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h5 class="fw-bold mb-0">Nasi Kuning Tumpeng</h5>
+                        <small class="text-utama">Klik untuk detail ➔</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="glass-card h-100" data-bs-toggle="modal" data-bs-target="#modalItem3" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/Ayam goreng.jpg" class="card-img-top img-hover-zoom" alt="Ayam Goreng" style="height:250px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h5 class="fw-bold mb-0">Ayam Goreng Rempah</h5>
+                        <small class="text-utama">Klik untuk detail ➔</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="glass-card h-100" data-bs-toggle="modal" data-bs-target="#modalItem4" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/perkedel.jpg" class="card-img-top img-hover-zoom" alt="Perkedel Kentang" style="height:250px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h5 class="fw-bold mb-0">Perkedel Kentang</h5>
+                        <small class="text-utama">Klik untuk detail ➔</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+                <div class="glass-card h-100" data-bs-toggle="modal" data-bs-target="#modalItem5" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/telor dadar.jpg" class="card-img-top img-hover-zoom" alt="Telur Dadar" style="height:250px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h5 class="fw-bold mb-0">Telur Dadar Gurih</h5>
+                        <small class="text-utama">Klik untuk detail ➔</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="glass-card h-100" data-bs-toggle="modal" data-bs-target="#modalItem6" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/sate usus.jpg" class="card-img-top img-hover-zoom" alt="Sate Usus" style="height:250px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-3">
+                        <h5 class="fw-bold mb-0">Sate Usus Bumbu</h5>
+                        <small class="text-utama">Klik untuk detail ➔</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suasana Restoran — full width -->
+            <div class="col-12 mt-2" data-aos="zoom-in" data-aos-delay="700">
+                <div class="glass-card" data-bs-toggle="modal" data-bs-target="#modalItem7" style="cursor:pointer;">
+                    <div style="overflow:hidden;">
+                        <img src="IMGS/Our Restauran.jpg" class="card-img-top img-hover-zoom" alt="Suasana Restoran" style="height:350px;width:100%;object-fit:cover;">
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <h4 class="fw-bold mb-1">Suasana Warung Juara</h4>
+                        <p class="text-muted small mb-0">Tempat nyaman dengan pelayanan ramah</p>
+                        <small class="text-utama">Klik untuk perbesar foto ➔</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============ MODAL 1 — NASI UDUK ============ -->
+    <div class="modal fade" id="modalItem1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/Nasi Uduk.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);max-height:280px;object-fit:cover;width:100%;">
+                    <h3 class="text-utama mb-1">Nasi Uduk Komplit</h3>
+                    <h4 class="text-emas mb-3">Rp 25.000 / Porsi</h4>
+                    <p class="text-muted small" style="text-align:justify;">Hidangan juara kami! Ditanak dengan santan kental, daun salam, serai, dan lengkuas. Disajikan bersama ayam goreng, telur balado, orek tempe, bihun, bawang goreng krispi, dan sambal kacang legit.</p>
+                    <a href="pesan.html" class="btn btn-premium w-100 mt-2">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL 2 — NASI KUNING ============ -->
+    <div class="modal fade" id="modalItem2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/Nasi Kuning.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);max-height:280px;object-fit:cover;width:100%;">
+                    <h3 class="text-utama mb-1">Nasi Kuning Tumpeng</h3>
+                    <h4 class="text-emas mb-3">Rp 25.000 / Porsi</h4>
+                    <p class="text-muted small" style="text-align:justify;">Nasi kuning wangi kunyit asli yang dipadu dengan ayam suwir bumbu rujak, perkedel kentang padat, kering tempe, irisan telur dadar, sambal bajak, dan kerupuk renyah. Cocok untuk semua acara.</p>
+                    <a href="pesan.html" class="btn btn-premium w-100 mt-2">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL 3 — AYAM GORENG ============ -->
+    <div class="modal fade" id="modalItem3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/Ayam goreng.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);max-height:280px;object-fit:cover;width:100%;">
+                    <h3 class="text-utama mb-1">Ayam Goreng Rempah</h3>
+                    <h4 class="text-emas mb-3">Rp 12.000 / Potong</h4>
+                    <p class="text-muted small" style="text-align:justify;">Ayam ungkep bumbu kuning yang digoreng garing di luar, namun tetap empuk dan juicy di dalam. Ditaburi serundeng laos yang harum, menjadikannya lauk ekstra favorit pelanggan setia kami.</p>
+                    <a href="pesan.html" class="btn btn-premium w-100 mt-2">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL 4 — PERKEDEL ============ -->
+    <div class="modal fade" id="modalItem4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/perkedel.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);max-height:280px;object-fit:cover;width:100%;">
+                    <h3 class="text-utama mb-1">Perkedel Kentang</h3>
+                    <h4 class="text-emas mb-3">Rp 8.000 / Buah</h4>
+                    <p class="text-muted small" style="text-align:justify;">Tumbukan kentang halus yang dicampur seledri segar dan sedikit daging cincang, kemudian digoreng dengan balutan telur hingga keemasan. Renyah di luar, lembut dan gurih di dalam.</p>
+                    <a href="pesan.html" class="btn btn-premium w-100 mt-2">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL 5 — TELUR DADAR ============ -->
+    <div class="modal fade" id="modalItem5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/telor dadar.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);max-height:280px;object-fit:cover;width:100%;">
+                    <h3 class="text-utama mb-1">Telur Dadar Gurih</h3>
+                    <h4 class="text-emas mb-3">Rp 10.000 / Porsi</h4>
+                    <p class="text-muted small" style="text-align:justify;">Telur dadar tipis berbumbu bawang merah, bawang putih, dan daun bawang yang digoreng hingga pinggirnya crispy keemasan. Pelengkap sederhana namun selalu bikin ketagihan.</p>
+                    <a href="pesan.html" class="btn btn-premium w-100 mt-2">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL 6 — SATE USUS ============ -->
+    <div class="modal fade" id="modalItem6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/sate usus.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);max-height:280px;object-fit:cover;width:100%;">
+                    <h3 class="text-utama mb-1">Sate Usus Bumbu</h3>
+                    <h4 class="text-emas mb-3">Rp 10.000 / Tusuk</h4>
+                    <p class="text-muted small" style="text-align:justify;">Usus ayam yang dibersihkan sempurna, ditusuk rapi lalu dibakar dengan bumbu kecap manis, bawang putih, dan rempah pilihan. Rasanya manis-gurih dengan aroma panggangan yang menggugah selera.</p>
+                    <a href="pesan.html" class="btn btn-premium w-100 mt-2">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL 7 — SUASANA RESTORAN ============ -->
+    <div class="modal fade" id="modalItem7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg mx-3">
+            <div class="modal-content glass-modal border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center pt-0 px-4 pb-4">
+                    <img src="IMGS/Our Restauran.jpg" class="img-fluid rounded-4 shadow-sm mb-3" style="border:3px solid rgba(255,255,255,0.5);width:100%;object-fit:cover;">
+                    <h3 class="text-utama mb-1">Suasana Warung Juara</h3>
+                    <p class="text-muted small mb-3">Atmosfer hangat dan kekeluargaan yang membuat setiap kunjungan terasa seperti pulang ke rumah. Meja bersih, pelayanan ramah, dan aroma masakan yang selalu menggugah selera dari pagi buta.</p>
+                    <a href="pesan.html" class="btn btn-premium px-4">Reservasi Tempat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WATERMARK -->
+    <div class="watermark text-center">
+        <img src="IMGS/Screenshot 2026-04-24 212039.png" alt="Foto Mahasiswa" class="rounded-circle mb-1 border border-warning" style="width:40px;height:40px;object-fit:cover;">
+        <div class="fw-bold" style="font-size:11px;">Ahmad Rifkiyanor</div>
+        <div class="text-muted" style="font-size:9px;">24.53.030592</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Nasi Kuning Juara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark glass-nav sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Nasi Kuning Juara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-1 align-items-center">
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.html">Pesanan</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="darkModeToggle" class="btn btn-sm btn-outline-light rounded-pill px-3">🌙 Dark Mode</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex flex-column justify-content-center align-items-center text-center text-white min-vh-100 position-relative" 
+                     style="background: linear-gradient(rgba(0,0,0,0.7), rgba(158, 42, 43, 0.7)), url('IMGS/Our Restauran.jpg') center/cover;">
+                    <div class="container px-4 z-1" style="padding-top: 80px; padding-bottom: 80px;">
+                        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill shadow-sm" data-aos="fade-down">Est. 2010 | Resep Legendaris</span>
+                        <h1 class="display-2 mb-3 text-capitalize" data-aos="zoom-in" data-aos-delay="100">Cita Rasa Kemewahan <br><span class="text-emas">Nusantara</span></h1>
+                        <p class="lead mb-4 mx-auto" style="max-width: 700px; font-weight: 300;" data-aos="fade-up" data-aos-delay="200">
+                            Menghadirkan simfoni rempah tradisional Indonesia dalam setiap suapan.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3" data-aos="fade-up" data-aos-delay="400">
+                            <a href="pesan.html" class="btn btn-premium btn-lg">Mulai Reservasi</a>
+                            <a href="galeri.html" class="btn btn-outline-light btn-lg rounded-pill px-4">Lihat Galeri</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex flex-column justify-content-center align-items-center text-center text-white min-vh-100 position-relative" 
+                     style="background: linear-gradient(rgba(0,0,0,0.7), rgba(158, 42, 43, 0.7)), url('IMGS/Nasi Kuning.jpg') center/cover;">
+                    <div class="container px-4 z-1">
+                        <h1 class="display-2 mb-3 text-capitalize">Kuning Merona <br><span class="text-emas">Penuh Makna</span></h1>
+                        <p class="lead mb-4 mx-auto" style="max-width: 700px; font-weight: 300;">Dibuat dari ekstrak kunyit murni tanpa pewarna buatan.</p>
+                        <a href="menu.html" class="btn btn-premium btn-lg">Lihat Menu</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="d-flex flex-column justify-content-center align-items-center text-center text-white min-vh-100 position-relative" 
+                     style="background: linear-gradient(rgba(0,0,0,0.7), rgba(158, 42, 43, 0.7)), url('IMGS/Nasi Uduk.jpg') center/cover;">
+                    <div class="container px-4 z-1">
+                        <h1 class="display-2 mb-3 text-capitalize">Gurihnya <br><span class="text-emas">Santan Murni</span></h1>
+                        <p class="lead mb-4 mx-auto" style="max-width: 700px; font-weight: 300;">Nasi uduk aromatik disajikan dengan lauk pauk berkualitas.</p>
+                        <a href="galeri.html" class="btn btn-premium btn-lg">Lihat Galeri</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="watermark text-center">
+        <img src="IMGS/Screenshot 2026-04-24 212039.png" alt="Foto Mahasiswa" class="rounded-circle mb-1 border border-warning" style="width: 40px; height: 40px; object-fit:cover;">
+        <div class="fw-bold" style="font-size: 11px; color: var(--color-text);">Ahmad Rifkiyanor</div>
+        <div class="text-muted" style="font-size: 9px;">24.53.030592</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

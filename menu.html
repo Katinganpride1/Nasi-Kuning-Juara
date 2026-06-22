@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Nasi Kuning Juara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark glass-nav sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Nasi Kuning Juara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-1 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pesan.html">Pesanan</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="darkModeToggle" class="btn btn-sm btn-outline-light rounded-pill px-3">🌙 Dark Mode</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5" data-aos="fade-up">
+        <div class="text-center mb-5">
+            <h2 class="text-utama display-5">Daftar Menu Hidangan</h2>
+            <p class="text-muted">Koleksi mahakarya rasa yang disiapkan dengan penuh dedikasi setiap pagi.</p>
+        </div>
+
+        <div class="glass-card p-4 mb-5">
+            <h4 class="text-emas mb-4 border-bottom pb-2" style="border-color: rgba(158, 42, 43, 0.2) !important;">🍚 Hidangan Utama</h4>
+            <!-- PERUBAHAN DI SINI: Menggunakan class responsive-table -->
+            <table class="table table-borderless align-middle m-0 responsive-table">
+                <thead style="border-bottom: 2px solid rgba(158, 42, 43, 0.2);">
+                    <tr class="text-utama d-none d-md-table-row">
+                        <th class="py-3 w-25">Nama Menu</th>
+                        <th class="py-3 w-50">Deskripsi Detail</th>
+                        <th class="py-3 text-end">Harga/Porsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h5 class="fw-bold mb-1">Nasi Uduk Komplit</h5>
+                            <span class="badge bg-danger rounded-pill mb-2 mb-md-0">🔥 Best Seller</span>
+                        </td>
+                        <td class="text-muted small">Nasi uduk aromatik khas Betawi, disajikan dengan ayam goreng bumbu kuning, telur balado, tempe orek, bihun goreng, sambal kacang, dan kerupuk udang.</td>
+                        <td class="harga-cell text-md-end fw-bold text-utama">Rp 25.000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h5 class="fw-bold mb-1">Nasi Kuning Komplit</h5>
+                            <span class="badge bg-warning text-dark rounded-pill mb-2 mb-md-0">✨ Signature</span>
+                        </td>
+                        <td class="text-muted small">Nasi kuning wangi kunyit asli, dilengkapi ayam suwir bumbu rujak, perkedel kentang padat, kering tempe, irisan telur dadar, sambal bajak, dan kerupuk.</td>
+                        <td class="harga-cell text-md-end fw-bold text-utama">Rp 25.000</td>
+                    </tr>
+                    <tr>
+                        <td><h5 class="fw-bold mb-1">Nasi Uduk Telur</h5></td>
+                        <td class="text-muted small">Varian ekonomis dengan Nasi uduk premium, pilihan telur balado atau dadar, orek tempe, bihun, dan sambal khas warung.</td>
+                        <td class="harga-cell text-md-end fw-bold text-utama">Rp 15.000</td>
+                    </tr>
+                    <tr style="border-bottom: none !important;">
+                        <td><h5 class="fw-bold mb-1">Nasi Kuning Telur</h5></td>
+                        <td class="text-muted small">Sajian pas untuk sarapan. Nasi kuning, telur bulat bumbu habang (merah), perkedel kentang, kering tempe, dan kerupuk renyah.</td>
+                        <td class="harga-cell text-md-end fw-bold text-utama">Rp 15.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="glass-card p-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-emas mb-4 border-bottom pb-2" style="border-color: rgba(158, 42, 43, 0.2) !important;">🍗 Ekstra Lauk Pelengkap</h4>
+            <table class="table table-borderless align-middle m-0 responsive-table">
+                <tbody>
+                    <tr>
+                        <td class="w-25"><h5 class="fw-bold mb-1">Ayam Goreng Rempah</h5></td>
+                        <td class="text-muted small">Ayam ungkep bumbu kuning yang digoreng garing di luar, empuk di dalam dengan taburan serundeng laos.</td>
+                        <td class="harga-cell text-md-end fw-bold text-success">Rp 12.000</td>
+                    </tr>
+                    <tr>
+                        <td class="w-25"><h5 class="fw-bold mb-1">Perkedel Kentang</h5></td>
+                        <td class="text-muted small">Tumbukan kentang halus dicampur seledri dan daging cincang sedikit, digoreng dengan balutan telur.</td>
+                        <td class="harga-cell text-md-end fw-bold text-success">Rp 8.000</td>
+                    </tr>
+                    <tr style="border-bottom: none !important;">
+                        <td class="w-25"><h5 class="fw-bold mb-1">Telur / Sate Usus</h5></td>
+                        <td class="text-muted small">Pilihan telur dadar/ceplok segar atau sate usus ayam bumbu manis gurih.</td>
+                        <td class="harga-cell text-md-end fw-bold text-success">Rp 10.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="watermark text-center">
+        <img src="IMGS/Screenshot 2026-04-24 212039.png" alt="Foto Mahasiswa" class="rounded-circle mb-1 border border-warning" style="width: 40px; height: 40px; object-fit:cover;">
+        <div class="fw-bold" style="font-size: 11px; color: var(--color-text);">Ahmad Rifkiyanor</div>
+        <div class="text-muted" style="font-size: 9px;">24.53.030592</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

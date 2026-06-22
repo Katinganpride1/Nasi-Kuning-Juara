@@ -1,0 +1,366 @@
+/* =========================================
+   CSS PREMIUM - RESPONSIVE & DARK MODE FIXED
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #fdf5e6 0%, #f3e5d8 100%);
+    --color-text: #331811;
+    --color-text-muted: #6c757d;
+    --color-primary: #9e2a2b;
+    --color-secondary: #e3a857;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.8);
+    --glass-nav: rgba(158, 42, 43, 0.9);
+    --color-dark: #331811;
+}
+
+body.dark-mode {
+    --bg-gradient: linear-gradient(135deg, #1a0d0b 0%, #2b1815 100%);
+    --color-text: #fdf5e6;
+    --color-text-muted: #c4b5b2;
+    --color-primary: #ff6b6b;
+    --color-secondary: #f6c073;
+    --glass-bg: rgba(20, 10, 8, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-nav: rgba(20, 10, 8, 0.95);
+    --color-dark: #fdf5e6;
+}
+
+/* =========================================
+   BASE
+========================================= */
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--color-text);
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.text-utama { color: var(--color-primary) !important; }
+.text-emas  { color: var(--color-secondary) !important; }
+
+/* =========================================
+   DARK MODE — GLOBAL OVERRIDES
+   (harus di luar @media agar berlaku di semua layar)
+========================================= */
+body.dark-mode .text-dark  { color: var(--color-text) !important; }
+body.dark-mode .text-muted { color: var(--color-text-muted) !important; }
+body.dark-mode .bg-white   { background-color: transparent !important; }
+body.dark-mode .text-black { color: #fdf5e6 !important; }
+
+body.dark-mode .glass-card,
+body.dark-mode .glass-card h1,
+body.dark-mode .glass-card h2,
+body.dark-mode .glass-card h3,
+body.dark-mode .glass-card h4,
+body.dark-mode .glass-card h5,
+body.dark-mode .glass-card h6,
+body.dark-mode .glass-card p,
+body.dark-mode .glass-card td,
+body.dark-mode .glass-card th,
+body.dark-mode .glass-card span:not(.badge),
+body.dark-mode .glass-card div,
+body.dark-mode .table,
+body.dark-mode .fw-bold {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .small { color: var(--color-text-muted) !important; }
+
+body.dark-mode .text-utama  { color: var(--color-primary)  !important; }
+body.dark-mode .text-emas   { color: var(--color-secondary) !important; }
+body.dark-mode .text-success { color: #4ade80 !important; }
+body.dark-mode .text-info    { color: #38bdf8 !important; }
+
+/* =========================================
+   DARK MODE — BOOTSTRAP TABLE OVERRIDE
+   Bootstrap inject background putih di .table
+   yang tidak ikut CSS variable, harus di-reset paksa
+========================================= */
+body.dark-mode .table,
+body.dark-mode .table > :not(caption) > * > *,
+body.dark-mode .table > tbody > tr > td,
+body.dark-mode .table > tbody > tr > th,
+body.dark-mode .table > thead > tr > td,
+body.dark-mode .table > thead > tr > th {
+    background-color: transparent !important;
+    color: var(--color-text) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Heading tabel */
+body.dark-mode .table thead th {
+    color: var(--color-primary) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Row separator */
+body.dark-mode .table > tbody > tr {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Badge tetap berwarna di dalam tabel */
+body.dark-mode .table .badge { color: #fff !important; }
+body.dark-mode .table .badge.bg-warning { color: #1a0c09 !important; }
+
+/* =========================================
+   NAVBAR
+========================================= */
+.glass-nav {
+    background: var(--glass-nav) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-brand { letter-spacing: 0.5px; }
+
+.nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    border-radius: 8px;
+    padding: 6px 12px !important;
+    transition: background 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    background: rgba(255,255,255,0.15);
+}
+
+/* =========================================
+   GLASS CARD
+========================================= */
+.glass-card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    color: var(--color-text);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+.btn-premium {
+    background: linear-gradient(45deg, var(--color-secondary), #d49845);
+    color: #1a0c09 !important;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 12px 28px;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.btn-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(227,168,87,0.5);
+}
+
+/* =========================================
+   FORM
+========================================= */
+.form-control,
+.form-select {
+    border-radius: 12px;
+    padding: 12px;
+    transition: all 0.3s;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.1);
+    color: var(--color-text);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(158,42,43,0.15);
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: rgba(0,0,0,0.4) !important;
+    border-color: rgba(255,255,255,0.1) !important;
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .form-control:focus {
+    background: rgba(0,0,0,0.6) !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 4px rgba(255,107,107,0.2) !important;
+}
+
+body.dark-mode .form-label,
+body.dark-mode label { color: var(--color-text) !important; }
+
+body.dark-mode .form-text { color: var(--color-text-muted) !important; }
+
+/* Placeholder */
+body.dark-mode .form-control::placeholder,
+body.dark-mode .form-select::placeholder { color: var(--color-text-muted) !important; }
+
+/* Checkbox custom */
+.custom-checkbox .form-check-label {
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: background 0.2s;
+}
+.custom-checkbox .form-check-input { display: none; }
+.custom-checkbox .form-check-input:checked + .form-check-label {
+    background: rgba(158,42,43,0.12);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+body.dark-mode .custom-checkbox .form-check-label {
+    border-color: rgba(255,255,255,0.15);
+    color: var(--color-text);
+}
+
+/* =========================================
+   MODAL
+========================================= */
+.modal-content.glass-modal {
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+}
+
+body.dark-mode .modal-content.glass-modal,
+body.dark-mode .modal-content.glass-modal h3,
+body.dark-mode .modal-content.glass-modal h4,
+body.dark-mode .modal-content.glass-modal p,
+body.dark-mode .modal-content.glass-modal small { color: var(--color-text) !important; }
+
+body.dark-mode .btn-close { filter: invert(1); }
+
+/* =========================================
+   GALERI IMAGE HOVER
+========================================= */
+.img-hover-zoom { transition: transform 0.6s ease; }
+.glass-card:hover .img-hover-zoom { transform: scale(1.08); }
+
+/* =========================================
+   WATERMARK (pojok kanan bawah)
+========================================= */
+.watermark {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1050;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 16px;
+    padding: 10px 12px;
+    line-height: 1.4;
+}
+
+.watermark .fw-bold { color: var(--color-dark) !important; }
+
+/* =========================================
+   HERO SECTION CONSISTENCY
+========================================= */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* =========================================
+   PAGE HEADER SECTION (Galeri, Menu, dsb.)
+========================================= */
+.page-header {
+    padding: 4rem 0 2rem;
+}
+
+/* =========================================
+   RESPONSIVE TABLE → CARD di HP
+========================================= */
+@media (max-width: 767.98px) {
+    .responsive-table,
+    .responsive-table tbody,
+    .responsive-table tr,
+    .responsive-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .responsive-table thead { display: none; }
+
+    .responsive-table tr {
+        margin-bottom: 16px;
+        border-bottom: 1px solid var(--glass-border) !important;
+        padding-bottom: 16px;
+    }
+
+    .responsive-table td {
+        text-align: left !important;
+        padding: 4px 0 !important;
+        border: none !important;
+    }
+
+    .responsive-table td.harga-cell {
+        font-size: 1.15rem;
+        margin-top: 4px;
+        text-align: left !important;
+    }
+}
+
+/* =========================================
+   RESPONSIVE TYPOGRAPHY
+========================================= */
+@media (max-width: 767.98px) {
+    .display-2 { font-size: 2.2rem; line-height: 1.2; }
+    .display-5 { font-size: 1.8rem; }
+
+    .watermark {
+        transform: scale(0.82);
+        transform-origin: bottom right;
+    }
+
+    .form-container { padding: 1.25rem !important; }
+
+    /* Galeri card di HP full width sudah di-handle col-12 */
+}
+
+/* =========================================
+   ALERT KONSISTEN DARK MODE
+========================================= */
+body.dark-mode .alert-warning {
+    background-color: rgba(227,168,87,0.12) !important;
+    color: var(--color-text) !important;
+    border-color: rgba(227,168,87,0.3) !important;
+}
+
+/* =========================================
+   BADGE TETAP BERWARNA
+========================================= */
+.badge { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* =========================================
+   SCROLL PADDING (supaya navbar tidak nutup konten)
+========================================= */
+html { scroll-padding-top: 80px; }

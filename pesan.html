@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pemesanan - Nasi Kuning Juara</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark glass-nav sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Nasi Kuning Juara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="pesan.html">Pesanan</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 pb-5" style="max-width: 800px;">
+        <div class="glass-card" data-aos="fade-up">
+            <div class="p-4 p-md-5">
+                <div class="text-center mb-4">
+                    <h2 class="text-utama display-6 mb-2">Formulir Reservasi</h2>
+                    <p class="text-muted">Lengkapi detail di bawah ini untuk pemesanan katering istimewa Anda.</p>
+                </div>
+                
+                <div class="alert alert-warning border-0 rounded-4 mb-4" style="background-color: rgba(227, 168, 87, 0.2); color: var(--color-dark);">
+                    <strong>💡 Info Penting:</strong> Reservasi katering wajib dilakukan selambat-lambatnya <strong>H-1</strong> sebelum acara berlangsung.
+                </div>
+
+                <!-- Tambahkan ID 'formPesanan' agar bisa di-reset oleh JS -->
+                <form id="formPesanan" action="" method="post" enctype="multipart/form-data" onsubmit="return validasiForm(event)">
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold small text-muted">NAMA LENGKAP</label>
+                            <input type="text" class="form-control form-control-lg" name="nama" placeholder="Ketik nama Anda..." required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold small text-muted">ALAMAT EMAIL</label>
+                            <input type="email" class="form-control form-control-lg" name="email" placeholder="email@domain.com">
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold small text-muted">MENU UTAMA <span class="text-danger">*</span></label>
+                            <select class="form-select form-select-lg" name="menu_utama" required>
+                                <option value="">-- Silakan Pilih Menu --</option>
+                                <option value="Uduk Komplit">Nasi Uduk Komplit (Rp 25.000)</option>
+                                <option value="Kuning Komplit">Nasi Kuning Komplit (Rp 25.000)</option>
+                                <option value="Uduk Telur">Nasi Uduk Telur (Rp 15.000)</option>
+                                <option value="Kuning Telur">Nasi Kuning Telur (Rp 15.000)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold small text-muted">JUMLAH PORSI</label>
+                            <input type="number" class="form-control form-control-lg" name="jumlah" min="10" value="10" required>
+                            <div class="form-text text-muted small">Minimal order 10 porsi.</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold small text-muted mb-3 d-block">TAMBAHAN LAUK EKTRA (Bisa pilih lebih dari satu)</label>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div class="form-check custom-checkbox">
+                                <input class="form-check-input" type="checkbox" name="lauk[]" value="Ayam Goreng" id="chk1">
+                                <label class="form-check-label" for="chk1">🍗 Ayam Goreng</label>
+                            </div>
+                            <div class="form-check custom-checkbox">
+                                <input class="form-check-input" type="checkbox" name="lauk[]" value="Perkedel" id="chk2">
+                                <label class="form-check-label" for="chk2">🥔 Perkedel</label>
+                            </div>
+                            <div class="form-check custom-checkbox">
+                                <input class="form-check-input" type="checkbox" name="lauk[]" value="Sate Usus" id="chk3">
+                                <label class="form-check-label" for="chk3">🍢 Sate Usus</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold small text-muted">TANGGAL PENGIRIMAN</label>
+                        <input type="date" class="form-control form-control-lg" name="tanggal" required>
+                    </div>
+
+                    <div class="mb-5">
+                        <label class="form-label fw-bold small text-muted">CATATAN KHUSUS / ALAMAT LENGKAP</label>
+                        <textarea class="form-control form-control-lg" name="catatan" rows="3" placeholder="Tuliskan alamat pengiriman detail dan request khusus (misal: sambal dipisah)..."></textarea>
+                    </div>
+                    
+                    <div class="d-flex gap-3 justify-content-end border-top pt-4" style="border-color: rgba(158, 42, 43, 0.2) !important;">
+                        <button type="reset" class="btn btn-outline-dark rounded-pill px-4" style="font-weight: 600; background: rgba(255,255,255,0.5);">Reset Formulir</button>
+                        <button type="submit" class="btn btn-premium btn-lg">Proses Pemesanan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL POP-UP SUKSES (DIPANGGIL OLEH JAVASCRIPT) -->
+    <div class="modal fade" id="modalSuksesPesanan" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-modal border-0 shadow-lg text-center p-4">
+                <div class="modal-body">
+                    <h1 class="display-1 text-success mb-3">✅</h1>
+                    <h3 class="text-utama mb-2">Pesanan Berhasil Dicatat!</h3>
+                    <p class="text-muted mb-4">Terima kasih atas pesanan Anda. Tim kami akan segera menghubungi Anda melalui nomor WhatsApp / Email yang terdaftar untuk konfirmasi pembayaran.</p>
+                    <button type="button" class="btn btn-premium w-100" data-bs-dismiss="modal">Selesai</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WATERMARK FOOTER -->
+    <div class="watermark p-2 text-center">
+        <img src="IMGS/Screenshot 2026-04-24 212039.png" class="rounded-circle mb-1 border border-warning" style="width: 45px; height: 45px; object-fit:cover;">
+        <div class="fw-bold" style="font-size: 12px; color: var(--color-dark);">Ahmad Rifkiyanor</div>
+        <div class="text-muted" style="font-size: 10px;">24.53.030592</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
